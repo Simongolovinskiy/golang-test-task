@@ -15,7 +15,7 @@ func getBaseUrl() string {
 	if err != nil {
 		log.Fatal(".env file couldn't be loaded")
 	}
-	baseUrl := os.Getenv("BASE_URL")
+	baseUrl := os.Getenv("FIRST_TASK_BASE_URL")
 	return baseUrl
 }
 

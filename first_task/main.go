@@ -8,7 +8,7 @@ import (
 	"log"
 )
 
-func main() {
+func run() {
 	var coinApi interfaces.ApiInt = api.CoinApi{}
 	var coinSerializer interfaces.SerializerInt = serializer.Serializer{}
 	coinList, err := coinSerializer.ConvertJson(coinApi.GetCoins())
@@ -17,4 +17,8 @@ func main() {
 	}
 	currentCoin := coinSerializer.GetCoinInfo("Ethereum", coinList)
 	fmt.Println(currentCoin)
+}
+
+func main() {
+	run()
 }
